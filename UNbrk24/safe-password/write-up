@@ -1,0 +1,4 @@
+Dupa ce am citit cerinta, am folosit un script in Python, care folosea
+api.pwnedpasswords.com si am testat fiecare parola din document dupa ce
+am sters toate whitespace-urile si <CR><LF>-urile. Am luat la rand parolele
+care fusese sparte de mai multe ori.

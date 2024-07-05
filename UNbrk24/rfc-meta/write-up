@@ -1,0 +1,19 @@
+❯ curl -v 'http://34.107.126.69:32016/?page=14'                   
+
+*   Trying 34.107.126.69:32016...
+* Connected to 34.107.126.69 (34.107.126.69) port 32016
+> GET /?page=14 HTTP/1.1
+> Host: 34.107.126.69:32016
+> User-Agent: curl/8.6.0
+> Accept: */*
+> 
+< HTTP/1.1 301 3434637d
+< Server: gunicorn
+< Date: Sat, 23 Mar 2024 11:21:33 GMT
+< Connection: close
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 0
+< Location: /?page=15
+< 
+* Closing connection
+

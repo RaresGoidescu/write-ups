@@ -1,0 +1,17 @@
+Am gasit in aceeasi maniera ca la task-ul wifibasic:
+
+KEY: 12345678
+BSSID: 02:00:00:00:05:00
+ESSID: wifiland
+
+Am generat PSK folosind https://www.wireshark.org/tools/wpa-psk.html
+=>
+PSK 7f7694bdacd91e94222f00bd49cd4dda8b0c3116d528a4bcc83f8a40ae78d7a5
+am decriptat fisierul .pcap folosind Wireshark
+
+si am gasit cateva pachete de genul:
+
+3704	171.508670	02:00:00:00:13:00	Broadcast	ARP	102	Who has 93.184.216.34? Tell 10.0.3.19
+
+host_ip = 10.0.3.19
+target_ip = 93.184.216.34

@@ -1,0 +1,46 @@
+aircrack-ng -z wifibasic.pcap -w ~/wpa2-wordlists/PlainText/cow.txt
+Reading packets, please wait...
+Opening wifibasic.pcap
+Read 968 packets.
+
+   #  BSSID              ESSID                     Encryption
+
+   1  02:00:00:00:00:00  BitSentinelRulez          WPA (1 handshake)
+   2  02:00:00:00:01:00  Unbreakabl3               Unknown
+   3  02:00:00:00:02:00  YetAnotherHacker          WPA (0 handshake)
+   4  02:00:00:00:03:00  Unbreakable               Unknown
+   5  02:00:00:00:04:00  TargetHiddenSSID          WPA (1 handshake)
+
+Index number of target network ? 5
+
+Reading packets, please wait...
+Opening wifibasic.pcap
+Read 968 packets.
+
+1 potential targets
+
+
+
+                               Aircrack-ng 1.7 
+
+      [00:00:57] 980161/995759 keys tested (17117.48 k/s) 
+
+      Time left: 0 seconds                                      98.43%
+
+                          KEY FOUND! [ tinkerbell ]
+
+
+      Master Key     : 94 D3 F1 DD 35 D7 41 20 88 49 C0 4E 55 96 83 DC 
+                       69 D2 74 88 13 D4 EC 46 48 D4 11 59 84 73 0F E8 
+
+      Transient Key  : 54 F9 B1 8F 36 04 CD F1 B0 ED DC A4 72 F6 5F D8 
+                       27 BC 04 3C 0E FB AD 52 F4 5C 69 C0 AE 0B A9 12 
+                       16 96 F9 09 7D 61 6E AC FA 71 86 A1 55 E5 C2 33 
+                       C2 DB E8 67 06 AE E5 A3 FF 74 70 38 09 CC B8 4A 
+
+      EAPOL HMAC     : 68 7B BF A7 0B 76 FD 45 AC 6E D1 7D 31 77 E8 F9 
+
+ESSID : TargetHiddenSSID
+BSSID : 02:00:00:00:04:00
+PSK   : tinkerbell
+
